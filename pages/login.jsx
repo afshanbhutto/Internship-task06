@@ -3,7 +3,7 @@ import {auth} from './Firebase'
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import Link from 'next/link';
 import Upload from './upload';
-const login = () => {
+const Login = () => {
 
     const lemailRef = useRef();
     const lpasswordRef = useRef()
@@ -104,4 +104,4 @@ const handleLogin = (e) => {
   );
 }
 
-export default login
+export default Login
