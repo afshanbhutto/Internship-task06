@@ -2,8 +2,8 @@ import React, { useRef } from 'react'
 import {auth} from './Firebase'
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import Link from 'next/link';
-import Upload from './upload';
-const Login = () => {
+// import Upload from './upload';
+const SignIn = () => {
 
     const lemailRef = useRef();
     const lpasswordRef = useRef()
@@ -79,7 +79,7 @@ const handleLogin = (e) => {
                 />
               </div>
             </div>
-<Upload/>
+{/* <Upload/> */}
             <div>
               <button
                 className='class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
@@ -90,7 +90,7 @@ const handleLogin = (e) => {
             </div>
           </form>
           <p className="mt-10 text-center text-sm text-gray-500">
-            Don't have an account?
+            Don&apos;t have an account?
             <Link
               href={"/signup"}
               className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
@@ -104,4 +104,4 @@ const handleLogin = (e) => {
   );
 }
 
-export default Login
+export default SignIn
