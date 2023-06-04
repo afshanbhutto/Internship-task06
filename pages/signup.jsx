@@ -1,10 +1,10 @@
 import React from 'react'
-import {useState, useRef } from 'react';
-import firebase from 'firebase/app'
+import { useRef } from 'react';
+// import firebase from 'firebase/app'
 import {getAuth, createUserWithEmailAndPassword} from 'firebase/auth'
 import Link from 'next/link';
-import{ref} from 'firebase/storage'
-import {auth, storage} from './Firebase'
+// import{ref} from 'firebase/storage'
+// import {auth, storage} from './Firebase'
 
 
 const Signup = () => {
@@ -12,10 +12,10 @@ const Signup = () => {
     const emailRef = useRef();
     const passwordRef = useRef();
 
-    //added after 
-    const [file, setFile] = useState(null);
-    const handleFileChange = (e) => setFile(e.target.files[0]);
-// remove abovev
+//     //added after 
+//     const [file, setFile] = useState(null);
+//     const handleFileChange = (e) => setFile(e.target.files[0]);
+// // remove abovev
     const handleSignup = (e) =>{
         e.preventDefault();
         const email = emailRef.current.value;
@@ -28,15 +28,15 @@ const Signup = () => {
           const user = userCredential.user;
 
 
-          // added after
-          // Upload the file to Firebase Storage
-      const storageRef = firebase.storage.ref();
-      const fileRef = storageRef.child(file.name);
-       fileRef.put(file);
+//           // added after
+//           // Upload the file to Firebase Storage
+//       const storageRef = firebase.storage.ref();
+//       const fileRef = storageRef.child(file.name);
+//        fileRef.put(file);
 
-      // Access the file URL
-      const fileURL =  fileRef.getDownloadURL();
-/// remove above
+//       // Access the file URL
+//       const fileURL =  fileRef.getDownloadURL();
+// /// remove above
 
 
           alert("Signup Successful")
@@ -78,7 +78,7 @@ const Signup = () => {
                 />
               </div>
             </div>
-            <input type="file" onChange={handleFileChange} />
+            {/* <input type="file" onChange={handleFileChange} /> */}
             <div>
               <label
                 for="password"

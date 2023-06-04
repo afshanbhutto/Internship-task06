@@ -2,8 +2,8 @@ import firebase from 'firebase/app'
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import {getAuth} from "firebase/auth"
-import {getStorage} from 'firebase/storage'
-import 'firebase/auth'
+// import {getStorage} from 'firebase/storage'
+// import 'firebase/auth'
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -12,7 +12,7 @@ import 'firebase/auth'
 const firebaseConfig = {
   apiKey: "AIzaSyBRRWpMO4wAgmhehO0AyELBRg0_rRiCl5U",
   authDomain: "internship-task-06.firebaseapp.com",
-  databaseURL: "https://internship-task-06-default-rtdb.firebaseio.com",
+  // databaseURL: "https://internship-task-06-default-rtdb.firebaseio.com",
   projectId: "internship-task-06",
   storageBucket: "internship-task-06.appspot.com",
   messagingSenderId: "1012622808515",
@@ -26,7 +26,7 @@ const app = initializeApp(firebaseConfig);
 
 const auth = getAuth(app)
 
-// added after
-export const storage = getStorage(app);
+// // added after
+// export const storage = getStorage(app);
 
-export default Firebase;
+export default function Firebase (){return<>There is nothing</>};
